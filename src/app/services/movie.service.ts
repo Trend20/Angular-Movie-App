@@ -16,4 +16,8 @@ export class MovieService {
   getMovies(searchString: string):Observable<any>{
     return this.http.get(`${this.api_url}&s=${searchString}${this.api_key}`)
   }
+
+  getSingleMovie(id: any){
+    return this.http.get<any>(`${this.api_url}i=${id}${this.api_key}`);
+  }
 }
