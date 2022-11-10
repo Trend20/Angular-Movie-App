@@ -1,0 +1,20 @@
+.search{
+  display: flex;
+  align-items: center;
+}
+
+.search input{
+  padding: 15px;
+}
+
+.search button{
+  margin-left: 30px;
+  padding: 15px;
+}
+
+.jumbotron{
+  background: rgb(215, 212, 212);
+  width: 50%;
+  padding: 100px;
+}
+

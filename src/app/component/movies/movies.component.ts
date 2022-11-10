@@ -9,6 +9,7 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class MoviesComponent implements OnInit {
 
+  pageTitle: string = "Search for Any Movie!"
   movies: any[] = [];
 
 
