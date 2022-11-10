@@ -1,37 +1,47 @@
-<div class="row">
-  <div class="col-md-4">
-    <img src="{{ movie.Poster }}" class="img-thumbnail" [alt]="movie.Title">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ movie.Poster }}" class="img-thumbnail" [alt]="movie.Title">
+    </div>
+    <div class="col-md-8">
+      <h3 class="text-center text-primary">{{ movie.Title }}</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Genre:</strong> {{ movie.Genre }}
+        </li>
+        <li class="list-group-item">
+          <strong>Released:</strong> {{ movie.Released }}
+        </li>
+        <li class="list-group-item">
+          <strong>Ratings:</strong> {{ movie.imdbRating }}
+        </li>
+        <li class="list-group-item">
+          <strong>Actors:</strong> {{ movie.Actors }}
+        </li>
+        <li class="list-group-item">
+          <strong>Language:</strong> {{ movie.Language }}
+        </li>
+        <li class="list-group-item">
+          <strong>Country:</strong> {{ movie.Country }}
+        </li>
+        <li class="list-group-item">
+          <strong>Director:</strong> {{ movie.Director }}
+        </li>
+        <li class="list-group-item">
+          <strong>Writer:</strong> {{ movie.Writer }}
+        </li>
+        <li class="list-group-item">
+          <strong>Votes:</strong> {{ movie.imdbVotes }}
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="col-md-8">
-    <h3 class="text-center text-primary">{{ movie.Title }}</h3>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>Genre:</strong> {{ movie.Genre }}
-      </li>
-      <li class="list-group-item">
-        <strong>Released:</strong> {{ movie.Released }}
-      </li>
-      <li class="list-group-item">
-        <strong>Ratings:</strong> {{ movie.imdbRating }}
-      </li>
-      <li class="list-group-item">
-        <strong>Actors:</strong> {{ movie.Actors }}
-      </li>
-      <li class="list-group-item">
-        <strong>Language:</strong> {{ movie.Language }}
-      </li>
-      <li class="list-group-item">
-        <strong>Country:</strong> {{ movie.Country }}
-      </li>
-      <li class="list-group-item">
-        <strong>Director:</strong> {{ movie.Director }}
-      </li>
-      <li class="list-group-item">
-        <strong>Writer:</strong> {{ movie.Writer }}
-      </li>
-      <li class="list-group-item">
-        <strong>Votes:</strong> {{ movie.imdbVotes }}
-      </li>
-    </ul>
+
+  <div class="details">
+      <h3 class="text-primary">Plot</h3>
+      <p class="text-primary">{{ movie.Plot }}</p>
+      <hr>
+      <a href="https://www.imdb.com/title/{{ movie.imdbID }}" class="btn bnt-primary text-primary" target="_blank">View IMDB</a>
+      <a [routerLink]="['/movies']" routerLinkActive class="btn bnt-danger" class="text-primary">Go Back To Search</a>
   </div>
 </div>

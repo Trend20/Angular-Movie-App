@@ -1,0 +1,7 @@
+.details{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  height: 300px;
+}
