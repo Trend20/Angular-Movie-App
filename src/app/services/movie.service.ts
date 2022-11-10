@@ -13,7 +13,7 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovies():Observable<any>{
-    return this.http.get(`${this.api_url}&s=terminator${this.api_key}`)
+  getMovies(searchString: string):Observable<any>{
+    return this.http.get(`${this.api_url}&s=${searchString}${this.api_key}`)
   }
 }

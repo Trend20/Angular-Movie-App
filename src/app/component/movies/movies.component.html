@@ -2,7 +2,8 @@
   <div class="jumbotron">
     <h1 class="text-center text-primary">Search for Any Movie!</h1>
     <div class="search">
-      <input type="text" class="form-control" placeholder="Search for Movie..">
+      <input type="text" #search class="form-control" placeholder="Search for Movie..">
+      <button (click)="getMovies(search.value)">Search</button>
     </div>
   </div>
 </div>
