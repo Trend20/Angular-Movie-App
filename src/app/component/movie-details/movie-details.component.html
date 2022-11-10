@@ -38,10 +38,12 @@
   </div>
 
   <div class="details">
-      <h3 class="text-primary">Plot</h3>
-      <p class="text-primary">{{ movie.Plot }}</p>
+      <h3>Plot</h3>
+      <p>{{ movie.Plot }}</p>
       <hr>
-      <a href="https://www.imdb.com/title/{{ movie.imdbID }}" class="btn bnt-primary text-primary" target="_blank">View IMDB</a>
-      <a [routerLink]="['/movies']" routerLinkActive class="btn bnt-danger" class="text-primary">Go Back To Search</a>
+      <div class="btns">
+        <a href="https://www.imdb.com/title/{{ movie.imdbID }}" class="btn bnt-primary" target="_blank" id="view">View IMDB</a>
+        <a [routerLink]="['/']" routerLinkActive class="btn bnt-danger" id="back">Go Back To Search</a>
+      </div>
   </div>
 </div>
