@@ -1,1 +1,13 @@
-<p>movie-card-list works!</p>
+<div class="movie">
+  <div>
+    <p>{{ movie.Year }}</p>
+  </div>
+  <div>
+    <img src="{{ movie.Poster }}" [alt]="movie.Title">
+  </div>
+  <div>
+    <span>{{ movie.Type }}</span>
+    <h3>{{ movie.Title }}</h3>
+    <button class="btn btn-primary">Movie Details</button>
+  </div>
+</div>
